@@ -1,23 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Reštaurácia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Reštaurácia</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Galéria</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="rezervacia.html">Rezervácia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <form id="todo-form">
-            <input type="text" id="new-task" placeholder="Pridaj novú úlohu...">
-            <button type="submit">Pridať</button>
-        </form>
+    <section class="intro">
+        <div class="container">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
 
-        <canvas id="whiteboard"></canvas>
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Polievky</h3>
+                    <p>Hovädzí vývar s mäsom a domácimi rezancami</p>
+                    <span class="price">5.80€</span>
+                    <p>Pikantná držková polievka</p>
+                    <span class="price">6.80€</span>
+                    <p>Mamkina fazuľová s údeným mäsom a cestovinou</p>
+                    <span class="price">6.80€</span>
+                    <p>Domáca hubová nakyslo zo zemiakmi</p>
+                    <span class="price">6.20€</span>
+                    <p>Ukrajinský boršč s mäsom alebo veggie</p>
+                    <span class="price">6.90€</span>
+                    <p>Bažantie consommé (vývar)</p>
+                    <span class="price">6.00€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Mäsité jedlá</h3>
+                    <p>200g Kurací steak s olivovým prelivom</p>
+                    <span class="price">9.00€</span>
+                    <p>200g, Morčacie prsia pečené s grilov.korením</p>
+                    <span class="price">9.80€</span>
+                    <p>200g, Steak z hovädzej sviečkovice</p>
+                    <span class="price">26.00€</span>
+                    <p>240g, Pečené kačacie stehno</p>
+                    <span class="price">10.50€</span>
+                    <p>200g, Pečené kačasie prsia</p>
+                    <span class="price">11.50€</span>
+                    <p>200g, Pečený losos s plátkom citróna</p>
+                    <span class="price">17.50€</span>
+                    <p>200g, Pečený zubáč s plátkom citróna</p>
+                    <span class="price">18.50€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Bezmäsité jedlá</h3>
+                    <p>120g, Vyprážaný syr</p>
+                    <span class="price">6.50€</span>
+                    <p>120g, Grilovaný encián (podávaný na čerstvom šaláte z rukoly s cherry paradajkami)</p>
+                    <span class="price">8.90€</span>
+                    <p>200g, Vyprážaný karfiol</p>
+                    <span class="price">5.30€</span>
+                    <p>300g, Krémové rizoto (napr. so špenátom, suš.paradajkami, hríbové) posýp. parmezánom</p>
+                    <span class="price">7.40€</span>
+                    <p>350g, Bryndzovo-zemiakové pirohy s kyslou smotanou</p>
+                    <span class="price">6.10€</span>
+                    <p>350g, Sladké pirohy alebo knedlíčky, maslo, posýpka</p>
+                    <span class="price">5.70€</span>
+                    <p>400g, Strapačky s kyslou kapustou</p>
+                    <span class="price">5.30€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Šaláty</h3>
+                    <p>200g, Paradajkový šalát s cibuľkou</p>
+                    <span class="price">4.50€</span>
+                    <p>200g, Uhorkový s kyslou smotanou200</p>
+                    <span class="price">5.30€</span>
+                    <p>150g, Listový šalát s francúzskym dresingom</p>
+                    <span class="price">6.50€</span>
+                    <p>200g, Kapustový s chrenom</p>
+                    <span class="price">3.50€</span>
+                    <p>230g, Cézar šalát</p>
+                    <span class="price">12.50€</span>
+                    <p>300g, Šalát s kuracím mäsom</p>
+                    <span class="price">13.40€</span>
+                    <p>240g, Listový šalát so zapekaným kozím syrom na bagete</p>
+                    <span class="price">13.80€</span>
+                    <p>350g, Grécky šalát</p>
+                    <span class="price">12.90€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Prílohy</h3>
+                    <p>130g, Hranolky</p>
+                    <span class="price">1.40€</span>
+                    <p>130g, Americké zemiaky</p>
+                    <span class="price">1.40€</span>
+                    <p>150g, Varené zemiaky</p>
+                    <span class="price">1.40€</span>
+                    <p>150g, Opekané zemiaky</p>
+                    <span class="price">1.40€</span>
+                    <p>150g, Ryža</p>
+                    <span class="price">1.40€</span>
+                    <p>50g, Kečup</p>
+                    <span class="price">0.70€</span>
+                    <p>50g, Tatárská omáčka</p>
+                    <span class="price">0.80€</span>
+                    <p>1 ks, Chlieb</p>
+                    <span class="price">0.10€</span>
+                    <p>170g, Pizza chlieb</p>
+                    <span class="price">2.00€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Dezerty</h3>
+                    <p>80g, Lávová čokoládová tortička, horúce lesné ovocie, šľahačka</p>
+                    <span class="price">4.90€</span>
+                    <p>250g, Palacinky s nutelou, šľahačka</p>
+                    <span class="price">5.90€</span>
+                    <p>250g, Palacinky s džemom a horúcim lesným ovocím, šľahačka</p>
+                    <span class="price">5.90€</span>
+                    <p>150g, Zmrzlinový pohár s horúcim lesným ovocím a šľahačkou</p>
+                    <span class="price">5.90€</span>
+                    <p>150g, Jablková štrúdľa s horúcimi višňami a s vanilkovou zmrzlinou</p>
+                    <span class="price">6.70€</span>
+                    <p>120g, Zmrzlina / Sorbet podl'a ponuky</p>
+                    <span class="price">5.60€</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Alkoholické nápoje</h3>
+                    <p>Tullamore 0,04l</p>
+                    <span class="price">2.50 €</span>
+                    <p>12r Glenfiddich 0,04l</p>
+                    <span class="price">4.20 €</span>
+                    <p>18r Glenfiddich 0,04l</p>
+                    <span class="price">6.80 €</span>
+                    <p>Jack Daniels 0,04l</p>
+                    <span class="price">2.90 €</span>
+                    <p>Matusalem 0,04l</p>
+                    <span class="price">5.80 €</span>
+                    <p>Sailor Jerry 0,04l</p>
+                    <span class="price">4.80 €</span>
+                    <p>Diplomatico 12y old 0,04l</p>
+                    <span class="price">6.80 €</span>
+                    <p>Pyrat xo 0,04l</p>
+                    <span class="price">7.80 €</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Nealkoholické nápoje</h3>
+                    <p>Coca cola, Fanta, Sprite, Cola light 0,33l</p>
+                    <span class="price">1.40 €</span>
+                    <p>Vinea 0,25l</p>
+                    <span class="price">1.50 €</span>
+                    <p>Cappy 0,20l</p>
+                    <span class="price">1.50 €</span>
+                    <p>Romerquelle 0,33l</p>
+                    <span class="price">1.40 €</span>
+                    <p>Ľadový čaj nestea 0,50l</p>
+                    <span class="price">1.50 €</span>
+                    <p>Redbull 0,25l</p>
+                    <span class="price">3.00 €</span>
+                    <p>Čapovaná kofola originál 0,30l</p>
+                    <span class="price">0.90 €</span>
+                    <p>Čapovaná kofola originál 0,50l</p>
+                    <span class="price">1.50 €</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Pizza</h3>
+                    <h4>Pizza Šunková</h4>
+                    <p>380g, paradajková drť, syr, šunka</p>
+                    <span class="price">6.80 €</span>
+                    <h4>Pizza Syrová</h4>
+                    <p>470g, paradajková drť, syr, syr Inovec, syr Niva, korbáčik, syr Mozzarella</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Šunkovo šampiňónová(1,3,7)</h4>
+                    <p>430g, paradajková drť, syr, šunka, šampiňóny</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Syrová(1,3,7)</h4>
+                    <p>470g, paradajková drť, syr, syr Inovec, syr Niva, korbáčik, syr Mozzarella</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Vegetariánska(1,3,7)</h4>
+                    <p>540g, paradajková drť, syr, kukurica, hrášok, artičoky, paprika rezy, brokolica, paradajky, šampiňóny</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Hawai(1,3,7)</h4>
+                    <p>420g, paradajková drť, syr, šunka, ananás</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Štyri ročné obdobia(1,3,7)</h4>
+                    <p>460g, paradajková drť, syr, šunka, artičoky, šampiňóny, kapary, olivy</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Kuracia(1,3,7)</h4>
+                    <p>490g, paradajková drť, syr, kuracie mäso, kukurica, syr Niva, vajce</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Labužnícka(1,3,7)</h4>
+                    <p>480g, paradajková drť, syr, šunka, olivy, cesnak, syr Niva</p>
+                    <span class="price">7.60 €</span>                                      
+                </div>
+                <div class="menu-item">
+                    <h4>Pizza Salámová(1,3,7)</h4>
+                    <p>480g, paradajková drť, syr, saláma, kapia, feferónky, cibuľa, syr Niva</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Mexická(1,3,7)</h4>
+                    <p>560g, paradajková drť, syr, klobása, kapia, feferónky, paprika rezy, fazuľa, paradajky, kukurica</p>
+                    <span class="price">7.70 €</span>
+                    <h4>Pizza Gazdovská(1,3,7)</h4>
+                    <p>490g, paradajková drť, syr, saláma, klobása, slanina, cibuľa, feferónky</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Americká(1,3,7)</h4>
+                    <p>500g, paradajková drť, syr, kukurica, slanina, šampiňóny, syr Niva, vajce</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Tuniaková(1,3,4,7)</h4>
+                    <p>480g, paradajková drť, syr, tuniak, kukurica, cesnak, cibuľa</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Morská(1,2,3,4,7,14)</h4>
+                    <p>440g, paradajková drť, syr, plody mora, cesnak, krabie mäso</p>
+                    <span class="price">8.00 €</span>
+                    <h4>Pizza Lahodná(1,3,7)</h4>
+                    <p>510g, paradajková drť, syr, šunka, artičoky, vajce, paprika rezy, šampiňóny</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Kysucká(1,3,7)</h4>
+                    <p>540g, paradajková drť, syr, kyslá kapusta, baranie rohy, klobása, slanina</p>
+                    <span class="price">7.60 €</span>
+                    <h4>Pizza Farebná(1,3,7)</h4>
+                    <p>490g, paradajková drť, syr, brokolica, olivy, kukurica, paprika rezy, kapia</p>
+                    <span class="price">7.30 €</span> 
+                </div>
+                <div class="menu-item">
+                    <h4>Pizza Talianska(1,3,7)</h4>
+                    <p>420g, paradajková drť, syr, bolonská zmes, syr Niva</p>
+                    <span class="price">7.30 €</span> 
+                    <h4>Pizza Bolonská(1,3,7)</h4>
+                    <p>480g, paradajková drť, syr, bolonská zmes, cibuľa, kapia, feferónky</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Mäsová(1,3,7)</h4>
+                    <p>500g, paradajková drť, syr, bravčové mäso, kuracie mäso, bolonská zmes, šunka</p>
+                    <span class="price">8.30 €</span>
+                    <h4>Pizza Hranolková(1,3,7)</h4>
+                    <p>530g, paradajková drť, syr, hranolky, syr Niva, olivy</p>
+                    <span class="price">7.60 €</span>
+                    <h4>Pizza Viola(1,3,7)</h4>
+                    <p>540g, paradajková drť, syr, údené mäso, kukurica, cesnak, syr Niva, saláma Inovec, vajce</p>
+                    <span class="price">8.30 €</span>
+                    <h4>Pizza Hermelínska(1,3,7)</h4>
+                    <p>440g, paradajková drť, syr, šunka, syr Hermelín, cesnak</p>
+                    <span class="price">7.60 €</span>
+                    <h4>Pizza Kovbojská(1,3,7)</h4>
+                    <p>480g, paradajková drť, syr, bravčové mäso, kapia, syr Niva, kukurica</p>
+                    <span class="price">7.90 €</span>
+                    <h4>Pizza Korzická(1,3,5,7)</h4>
+                    <p>480g, paradajková drť, syr, kuracie mäso, ananás, olivy, artičoky</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Liptovská(1,3,7)</h4>
+                    <p>440g, paradajková drť, syr, korbáčik, bryndza, cibuľa, slanina</p>
+                    <span class="price">7.90 €</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Pizza Krabia(1,2,3,7)</h4>
+                    <p>410g, paradajková drť, syr, krabie mäso, kukurica, cesnak</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Slaninová(1,3,7)</h4>
+                    <p>460g, paradajková drť, syr, slanina, cibuľa, feferóny, syr Niva, údené mäso</p>
+                    <span class="price">8.10 €</span>
+                    <h4>Pizza Motorad(1,3,7)</h4>
+                    <p>470g, paradajková drť, syr, klobása, šampiňóny, slanina</p>
+                    <span class="price">7.30 €</span>
+                    <h4>Pizza Singapurská(1,3,7,8)</h4>
+                    <p>530g, paradajková drť, syr, šunka, ananás, syr Mozzarella, oriešky</p>
+                    <span class="price">7.60 €</span>
+                    <h4>Pizza Sedliacka(1,3,7)</h4>
+                    <p>420g, pradajková drť, syr, šunka, údené mäso, vajce, kapia, hrášok, kukurica</p>
+                    <span class="price">7.80 €</span>
+                    <h4>Pizza Grand(1,3,7)</h4>
+                    <p>430g, paradajková drť, syr, šunka, slanina, syr Hermelín, syr Niva, kukurica, syr Parmezán</p>
+                    <span class="price">8.80 €</span>
+                    <h4>Pizza Čertovská(1,3,7)</h4>
+                    <p>410g, paradajková drť, syr, saláma, kapia, feferónky, cibuľa, syr Niva, klobáska</p>
+                    <span class="price">8.10 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galéria</h2>
+            <div class="gallery-images">
+                <img src="https://www.daibau.sk/showfile.php?id=208442" alt="Reštaurácia">
+                <img src="https://www.daibau.sk/showfile.php?id=208576" alt="Reštaurácia">
+                <img src="https://www.daibau.sk/showfile.php?id=208578" alt="Reštaurácia">
+                <img src="https://www.daibau.sk/showfile.php?id=208580" alt="Reštaurácia">
+                <img src="https://www.daibau.sk/showfile.php?id=208582" alt="Reštaurácia">
+                <img src="https://cdn.metro-group.com/sk/oo2/sk_pim_706161001001_00?format=jpg&quality=90" alt="Example dish">
+                <img src="https://www.penzionzlatydukat.sk/wp-content/uploads/2016/07/Slepaci-vyvar-s-masom-a-domacimi-rezancami.jpg" alt="Example dish">
+                <img src="https://eu.tastescdn.net/thumbor/W_ujcvqRTB209yNMzrbtvL89WNM=/1050x1050/filters:quality(65):brightness(2):contrast(2):rgb(2,-2,0):sharpen(0.2,0.2,true)/sk/recipe/HUkSYoLUFPxEvoidNVE2/cde02dd7cb70b45f9c2c71aff6b4fa.jpeg" alt="Example dish">
+                <img src="https://pizzabambini.cz/image/cache/catalog/demo/product/pizza/sunkova-700x700.jpg" alt="Example dish">
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="">
     </div>
 
-    <script src="js/script.js"></script>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontaktujte nás</h2>
+            <form id="contact-form">
+                <label for="name">Vaše meno:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Váš e-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Správa:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Odoslať</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

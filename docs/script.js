@@ -1,34 +1,19 @@
-const form = document.getElementById('todo-form');
-const taskInput = document.getElementById('new-task');
-const whiteboard = document.getElementById('whiteboard');
-const ctx = whiteboard.getContext('2d');
 
-function resizeCanvas() {
-    whiteboard.width = whiteboard.offsetWidth;
-    whiteboard.height = whiteboard.offsetHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-form.addEventListener('submit', function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    const taskText = taskInput.value.trim();
-    
-    if (taskText !== '') {
-        addTaskToWhiteboard(taskText);
-        taskInput.value = '';
-    }
+    alert("Ďakujeme za kontakt! Čoskoro sa vám ozveme.");
 });
+const galleryImages = document.querySelectorAll('.gallery-images img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
 
-function addTaskToWhiteboard(taskText) {
-    const x = Math.random() * (whiteboard.width - 100);
-    const y = Math.random() * (whiteboard.height - 30);
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
 
-    ctx.font = '16px Arial';
-    ctx.fillStyle = '#333';
-    ctx.fillText(taskText, x, y);
-}
-
-whiteboard.addEventListener('dblclick', function() {
-    ctx.clearRect(0, 0, whiteboard.width, whiteboard.height);
-});
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
